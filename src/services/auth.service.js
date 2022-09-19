@@ -2,14 +2,12 @@ import axios from "axios";
 
 //const API_URL = "https://code-repo-mathew.herokuapp.com/api/auth/";
 
-const transport = axios.create({
-  withCredentials: true
-})
 
-const API_URL = "https://code-repo-mathew.herokuapp.com/api/auth/";
+
+const API_URL = "https://one-click-ui.herokuapp.com/api/auth/";
 
 const register = (username, email, password) => {
-  return transport.post(API_URL + "signup", {
+  return axios.post(API_URL + "signup", {
     username,
     email,
     password,
@@ -17,7 +15,7 @@ const register = (username, email, password) => {
 };
 
 const login = (username, password) => {
-  return transport
+  return axios
     .post(API_URL + "signin", {
       username, 
       password,
@@ -33,7 +31,7 @@ const login = (username, password) => {
 
 const logout = () => {
   localStorage.removeItem("user");
-  return transport.post(API_URL + "signout").then((response) => {
+  return axios.post(API_URL + "signout").then((response) => {
     return response.data;
   });
 };
