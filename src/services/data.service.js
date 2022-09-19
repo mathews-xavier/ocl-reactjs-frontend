@@ -26,7 +26,7 @@ const saveData = (dataObj) => {
   const DataService = {
     saveData,
     getUserData
-  }
+  } 
   
   export default DataService;
   
