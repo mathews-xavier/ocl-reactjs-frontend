@@ -1,7 +1,7 @@
 import axios from "axios";
 import AuthService from "../services/auth.service";
 
-const API_URL = "http://localhost:3000/api/data/";
+const API_URL = "https://code-repo-mathew.herokuapp.com/api/data/";
 
 const currentUser = AuthService.getCurrentUser();
 
